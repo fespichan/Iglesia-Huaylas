@@ -1,0 +1,419 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Un mensaje breve de esperanza, fe y oración para quien necesita un nuevo comienzo." />
+  <title>Un Mensaje de Esperanza para Ti</title>
+  <style>
+    :root {
+      --ink: #17202a;
+      --muted: #53616f;
+      --paper: #fffaf3;
+      --soft: #f3efe7;
+      --line: #ded6c8;
+      --accent: #2f7d5c;
+      --accent-dark: #225d45;
+      --gold: #c98d35;
+      --shadow: 0 18px 50px rgba(23, 32, 42, 0.14);
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+      margin: 0;
+      font-family: "Segoe UI", Arial, sans-serif;
+      color: var(--ink);
+      background: var(--paper);
+      line-height: 1.6;
+    }
+
+    img {
+      display: block;
+      max-width: 100%;
+    }
+
+    .hero {
+      min-height: 92svh;
+      display: grid;
+      align-items: end;
+      position: relative;
+      padding: 28px 18px 44px;
+      color: #ffffff;
+      background:
+        linear-gradient(180deg, rgba(17, 24, 39, 0.04) 0%, rgba(17, 24, 39, 0.34) 58%, rgba(17, 24, 39, 0.84) 100%),
+        url("https://bananomeridiano.com/wp-content/uploads/2019/10/trekking-santa-cruz-huaraz.jpg") center 45% / cover;
+    }
+
+    .hero-content {
+      width: min(760px, 100%);
+      margin: 0 auto;
+    }
+
+    .church-name {
+      display: block;
+      max-width: 760px;
+      padding: 0;
+      border: 0;
+      background: transparent;
+      font-size: clamp(1.75rem, 6vw, 3.6rem);
+      line-height: 1.04;
+      font-weight: 900;
+      letter-spacing: 0;
+      text-wrap: balance;
+      text-shadow: 0 4px 18px rgba(0, 0, 0, 0.55);
+      overflow-wrap: anywhere;
+    }
+
+    .church-name::before {
+      display: none;
+    }
+
+    h1 {
+      max-width: 720px;
+      margin: 16px 0 14px;
+      font-size: clamp(1.65rem, 4.5vw, 3rem);
+      line-height: 1.06;
+      letter-spacing: 0;
+      text-wrap: balance;
+    }
+
+    .hero p {
+      max-width: 650px;
+      margin: 0 0 26px;
+      color: rgba(255, 255, 255, 0.92);
+      font-size: clamp(1.02rem, 2.4vw, 1.25rem);
+    }
+
+    .actions {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 12px;
+    }
+
+    .button {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 9px;
+      min-height: 48px;
+      padding: 13px 18px;
+      border-radius: 8px;
+      border: 1px solid transparent;
+      text-decoration: none;
+      font-weight: 800;
+      color: var(--ink);
+      background: #ffffff;
+      box-shadow: 0 10px 24px rgba(0, 0, 0, 0.18);
+    }
+
+    .button svg {
+      width: 20px;
+      height: 20px;
+      flex: 0 0 auto;
+      fill: currentColor;
+    }
+
+    .button.primary {
+      color: #ffffff;
+      background: var(--accent);
+    }
+
+    .button.primary:hover,
+    .button.primary:focus-visible {
+      background: var(--accent-dark);
+    }
+
+    .button.secondary {
+      color: #ffffff;
+      border-color: rgba(255, 255, 255, 0.45);
+      background: rgba(255, 255, 255, 0.12);
+      box-shadow: none;
+      backdrop-filter: blur(8px);
+    }
+
+    .button.youtube {
+      color: #ffffff;
+      background: #ff0033;
+      box-shadow: 0 10px 24px rgba(255, 0, 51, 0.22);
+    }
+
+    .button.facebook {
+      color: #ffffff;
+      background: #1877f2;
+      box-shadow: 0 10px 24px rgba(24, 119, 242, 0.22);
+    }
+
+    .button.youtube:hover,
+    .button.youtube:focus-visible {
+      background: #d9002b;
+    }
+
+    .button.facebook:hover,
+    .button.facebook:focus-visible {
+      background: #0f5fca;
+    }
+
+    main {
+      background: var(--paper);
+    }
+
+    .section {
+      padding: 54px 18px;
+    }
+
+    .section.alt {
+      background: var(--soft);
+    }
+
+    .wrap {
+      width: min(760px, 100%);
+      margin: 0 auto;
+    }
+
+    .eyebrow {
+      margin: 0 0 8px;
+      color: var(--accent);
+      font-size: 0.82rem;
+      font-weight: 900;
+      text-transform: uppercase;
+      letter-spacing: 0.06em;
+    }
+
+    h2 {
+      margin: 0 0 18px;
+      font-size: clamp(1.65rem, 5vw, 2.4rem);
+      line-height: 1.08;
+      letter-spacing: 0;
+      text-wrap: balance;
+    }
+
+    p {
+      margin: 0 0 16px;
+      color: var(--muted);
+      font-size: 1.03rem;
+    }
+
+    .verse {
+      margin: 30px 0;
+      padding: 24px;
+      border-left: 5px solid var(--gold);
+      border-radius: 8px;
+      background: #ffffff;
+      box-shadow: var(--shadow);
+    }
+
+    .verse blockquote {
+      margin: 0;
+      color: var(--ink);
+      font-size: clamp(1.18rem, 4vw, 1.65rem);
+      line-height: 1.28;
+      font-weight: 800;
+      text-wrap: balance;
+    }
+
+    .verse cite {
+      display: block;
+      margin-top: 12px;
+      color: var(--muted);
+      font-style: normal;
+      font-weight: 700;
+    }
+
+    .steps {
+      display: grid;
+      gap: 14px;
+      margin-top: 24px;
+    }
+
+    .step {
+      display: grid;
+      grid-template-columns: 42px 1fr;
+      gap: 14px;
+      align-items: start;
+      padding: 18px;
+      border: 1px solid var(--line);
+      border-radius: 8px;
+      background: #ffffff;
+    }
+
+    .step-number {
+      display: grid;
+      place-items: center;
+      width: 42px;
+      height: 42px;
+      border-radius: 50%;
+      color: #ffffff;
+      background: var(--accent);
+      font-weight: 900;
+    }
+
+    .step h3 {
+      margin: 0 0 4px;
+      font-size: 1.05rem;
+      letter-spacing: 0;
+    }
+
+    .step p {
+      margin: 0;
+      font-size: 0.98rem;
+    }
+
+    .contact-band {
+      color: #ffffff;
+      background: #1f3b34;
+    }
+
+    .contact-band p {
+      color: rgba(255, 255, 255, 0.82);
+    }
+
+    .contact-panel {
+      display: grid;
+      gap: 18px;
+      align-items: center;
+    }
+
+    .contact-list {
+      display: grid;
+      gap: 8px;
+      margin: 20px 0 0;
+      padding: 0;
+      list-style: none;
+      color: rgba(255, 255, 255, 0.86);
+    }
+
+    .contact-list a {
+      color: #ffffff;
+      font-weight: 800;
+    }
+
+    footer {
+      padding: 28px 18px;
+      color: #6b7280;
+      background: #ffffff;
+      text-align: center;
+      font-size: 0.9rem;
+    }
+
+    footer p {
+      margin: 0;
+      font-size: 0.9rem;
+    }
+
+    @media (max-width: 520px) {
+      .hero {
+        min-height: 88svh;
+      }
+
+      .actions,
+      .button {
+        width: 100%;
+      }
+
+      .step {
+        grid-template-columns: 1fr;
+      }
+    }
+  </style>
+</head>
+<body>
+  <header class="hero">
+    <div class="hero-content">
+      <div class="church-name">IGLESIA DE HUAYLAS CHORRILLOS MOVIMIENTO MISIONERO MUNDIAL</div>
+      <h1>Un minuto para respirar esperanza.</h1>
+      <p>Si llegaste aqui por un codigo QR, no fue una casualidad pequeña. Queremos compartir contigo un mensaje sencillo: Dios no se ha olvidado de ti.</p>
+      <div class="actions" aria-label="Acciones principales">
+        <a class="button primary" href="#contacto">Ver horarios y dirección</a>
+        <a class="button secondary" href="#mensaje">Leer el mensaje</a>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <section class="section" id="mensaje">
+      <div class="wrap">
+        <p class="eyebrow">Para hoy</p>
+        <h2>No tienes que cargarlo todo solo.</h2>
+        <p>A veces la vida se llena de prisa, cansancio, preguntas y silencios dificiles de explicar. Tal vez por fuera todo parece avanzar, pero por dentro hay una parte de ti que necesita paz.</p>
+        <p>La fe cristiana comienza con una buena noticia: Dios se acerco a nosotros por medio de Jesus. No vino a condenarte ni a alejarte, sino a ofrecerte perdón, restauración y un nuevo comienzo.</p>
+
+        <div class="verse">
+          <blockquote>"Porque de tal manera amo Dios al mundo, que ha dado a su Hijo unigenito, para que todo aquel que en el cree, no se pierda, mas tenga vida eterna."</blockquote>
+          <cite>Juan 3:16</cite>
+        </div>
+
+        <p>Jesus entrego su vida en la cruz y resucito para abrir un camino de reconciliacion con Dios. Puedes hablar con El ahora mismo, con palabras sencillas, desde donde estes.</p>
+      </div>
+    </section>
+
+    <section class="section alt">
+      <div class="wrap">
+        <p class="eyebrow">Una oracion sencilla</p>
+        <h2>Si quieres acercarte a Dios, puedes empezar asi.</h2>
+        <p>Senor Jesus, reconozco que te necesito. Perdona mis pecados, sana mi corazon y guiame desde hoy. Creo que diste tu vida por mi y quiero aprender a caminar contigo. Amen.</p>
+
+        <div class="steps" aria-label="Siguientes pasos">
+          <div class="step">
+            <div class="step-number">1</div>
+            <div>
+              <h3>Habla con Dios</h3>
+              <p>No necesitas palabras perfectas. Ora con sinceridad y cuentale lo que estas viviendo.</p>
+            </div>
+          </div>
+          <div class="step">
+            <div class="step-number">2</div>
+            <div>
+              <h3>Busca apoyo</h3>
+              <p>Conversa con alguien de confianza o acercate a una reunion para recibir oracion y acompanamiento.</p>
+            </div>
+          </div>
+          <div class="step">
+            <div class="step-number">3</div>
+            <div>
+              <h3>Da un siguiente paso</h3>
+              <p>Te invitamos a visitarnos, leer el evangelio de Juan y seguir conociendo a Jesus.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section contact-band" id="contacto">
+      <div class="wrap contact-panel">
+        <div>
+          <p class="eyebrow">Estamos para servirte</p>
+          <h2>¿Quieres que oremos por ti?</h2>
+          <p>Te esperamos en nuestras reuniones. Tambien puedes acercarte al equipo de bienvenida al finalizar el servicio para recibir oración con discreción.</p>
+        </div>
+        <div class="actions">
+          <a class="button primary" href="#mensaje">Volver al mensaje</a>
+          <a class="button youtube" href="https://www.youtube.com/@TU_CANAL" target="_blank" rel="noopener" aria-label="Abrir canal de YouTube">
+            <svg viewBox="0 0 24 24" aria-hidden="true">
+              <path d="M23.5 6.2a3 3 0 0 0-2.1-2.1C19.5 3.6 12 3.6 12 3.6s-7.5 0-9.4.5A3 3 0 0 0 .5 6.2 31.5 31.5 0 0 0 0 12a31.5 31.5 0 0 0 .5 5.8 3 3 0 0 0 2.1 2.1c1.9.5 9.4.5 9.4.5s7.5 0 9.4-.5a3 3 0 0 0 2.1-2.1A31.5 31.5 0 0 0 24 12a31.5 31.5 0 0 0-.5-5.8ZM9.6 15.6V8.4l6.3 3.6-6.3 3.6Z" />
+            </svg>
+            YouTube
+          </a>
+          <a class="button facebook" href="https://www.facebook.com/TU_PAGINA" target="_blank" rel="noopener" aria-label="Abrir pagina de Facebook">
+            <svg viewBox="0 0 24 24" aria-hidden="true">
+              <path d="M24 12.1C24 5.4 18.6 0 12 0S0 5.4 0 12.1C0 18.1 4.4 23 10.1 24v-8.4h-3v-3.5h3V9.5c0-3 1.8-4.7 4.5-4.7 1.3 0 2.7.2 2.7.2v3h-1.5c-1.5 0-2 .9-2 1.9v2.2h3.4l-.5 3.5h-2.9V24c5.8-.9 10.2-5.9 10.2-11.9Z" />
+            </svg>
+            Facebook
+          </a>
+          <a class="button secondary" href="mailto:contacto@tuiglesia.org">Correo opcional</a>
+        </div>
+        <ul class="contact-list">
+          <li><strong>Dirección:</strong> Hipólito de la Melena 126 (Ex - Guatemala), Chorrillos</li>
+          <li><strong>Reuniones:</strong> MARTES A SABADO 19:30 PM y DOMINGOS 7:00 AM-13:00 PM Y 18:30 PM </li>
+        </ul>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <p>© 2026 IGLESIA DE HUAYLAS CHORRILLOS MOVIMIENTO MISIONERO MUNDIAL. Todos los derechos reservados.</p>
+  </footer>
+</body>
+</html>
